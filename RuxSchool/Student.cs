@@ -40,7 +40,8 @@ namespace RuxSchool
         // Number of working days of the student till date
         public int WorkingDays = 0;
         // Total marks obtained by the student in tests.
-        public int Marks { get;  set; }
+        public int Marks { get;  private set; }
+        public decimal GPA { get; private set; }
         #endregion
 
         #region constructor
@@ -54,6 +55,7 @@ namespace RuxSchool
         #endregion
 
         #region Methods
+       
         /// <summary>
         /// Attendance of the student is updated
         /// </summary>
