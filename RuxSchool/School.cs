@@ -13,30 +13,31 @@ namespace RuxSchool
        /// </summary>
         #region Fields
         private static List<Student> student_list = new List<Student>();
-        private static List<Teacher> TotalTeachers = new List<Teacher>();
+        
         #endregion
 
         public static Student CreateProfile(string name,string dob,Syllabus medium, string emailId,string standard)
         {
             var student_profile = new Student();
-            student_profile.Name = name;
-            student_profile.DOB = dob;
-            student_profile.Medium = medium;
-            student_profile.EmailID = emailId;
-            student_profile.Standard = standard;
-            student_list.Add(student_profile);
+            using (var db = new StudentDB())
+            {   
+                student_profile.Name = name;
+                student_profile.DOB = dob;
+                student_profile.Medium = medium;
+                student_profile.EmailID = emailId;
+                student_profile.Standard = standard;
+                db.StudentDetails.Add(student_profile);
+                db.SaveChanges();
+            }
+                
             return student_profile;
         }
-        public static Teacher EnterProfile(string name,string dob,string qualification,int teaching_experience)
+
+        public static Student GetTheStudent(int rollnumber)
         {
-            var teacher_profile = new Teacher();
-            teacher_profile.Name = name;
-            teacher_profile.DOB = dob;
-            teacher_profile.Qualification = qualification;
-            teacher_profile.TeachingExperience = teaching_experience;
-            TotalTeachers.Add(teacher_profile);
-            return teacher_profile;
+            return new Student();
         }
+        
 
 
         public static void PrintAllStudent()
@@ -47,14 +48,7 @@ namespace RuxSchool
             }
         }
 
-        public static void AllTeacherDetails()
-        {
-            foreach(var teacher_profile in TotalTeachers)
-            {
-                Console.WriteLine($"Name:{teacher_profile.Name}, DateOfBirth : {teacher_profile.DOB}, BasicPay:{teacher_profile.basicpay},NetPay:{teacher_profile.netpay}");
-            }
-        }
-       
+
 
     }
 }

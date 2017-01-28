@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace RuxSchool
         #endregion
 
         #region properties
+        [Key]
         //Unique roll number of the student 
         public int RollNumber { get; private set; }
         //Name of the student 
@@ -42,6 +44,7 @@ namespace RuxSchool
         // Total marks obtained by the student in tests.
         public int Marks { get;  private set; }
         public decimal GPA { get; private set; }
+        public virtual ICollection<ExamResults> Results { get; set; }
         #endregion
 
         #region constructor
