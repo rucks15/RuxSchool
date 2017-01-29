@@ -55,6 +55,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExamResults.cs" />
+    <Compile Include="Migrations\201701280931542_InitialCreate.cs" />
+    <Compile Include="Migrations\201701280931542_InitialCreate.Designer.cs">
+      <DependentUpon>201701280931542_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701281910139_removingperc.cs" />
+    <Compile Include="Migrations\201701281910139_removingperc.Designer.cs">
+      <DependentUpon>201701281910139_removingperc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701290735489_datatypechange.cs" />
+    <Compile Include="Migrations\201701290735489_datatypechange.Designer.cs">
+      <DependentUpon>201701290735489_datatypechange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StudentDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +77,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701280931542_InitialCreate.resx">
+      <DependentUpon>201701280931542_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701281910139_removingperc.resx">
+      <DependentUpon>201701281910139_removingperc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701290735489_datatypechange.resx">
+      <DependentUpon>201701290735489_datatypechange.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

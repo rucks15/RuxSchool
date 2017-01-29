@@ -40,9 +40,9 @@ namespace RuxSchool
         //Standard in which the student is studying in the current year
         public string Standard { get; set; }
         // Number of working days of the student till date
-        public int WorkingDays = 0;
+        public int WorkingDays { get; set; }
         // Total marks obtained by the student in tests.
-        public int Marks { get;  private set; }
+        public decimal Marks { get;  private set; }
         public decimal GPA { get; private set; }
         public virtual ICollection<ExamResults> Results { get; set; }
         #endregion
@@ -64,10 +64,18 @@ namespace RuxSchool
         /// </summary>
         /// <param name="days">Number of working days</param>
         /// <returns>Total working days till last update</returns>
-        public int Attendance(int days)
+        public void Attendance(int days)
         {
-            WorkingDays += days;
-            return WorkingDays;
+            using (var db = new StudentDB())
+            {
+                var original = db.StudentDetails.Where(a => a.RollNumber == this.RollNumber).First();
+                var update = original;
+                WorkingDays += days;
+                update.WorkingDays = WorkingDays;
+                db.Entry(original).CurrentValues.SetValues(update);
+                db.SaveChanges();
+                //return WorkingDays;
+            }
         }
         /// <summary>
         /// Total marks of the tests is calculated
@@ -77,10 +85,20 @@ namespace RuxSchool
         /// <param name="M3">Mark of subject3</param>
         /// <param name="M4">Mark of subject4</param>
         /// <returns>Total marks of all subjects</returns>
-        public int Result(int M1,int M2,int M3,int M4)
+        public decimal Result(decimal M1,decimal M2,decimal M3,decimal M4)
         {
-            Marks = M1 + M2 + M3 + M4;
-            return Marks;
+            using (var db = new StudentDB())
+            {
+                var original = db.StudentDetails.Where(a => a.RollNumber == this.RollNumber).FirstOrDefault();
+                var updated = original;
+                Marks = M1 + M2 + M3 + M4;
+                GPA = Marks / 4;
+                updated.Marks = Marks;
+                updated.GPA = GPA;
+                db.Entry(original).CurrentValues.SetValues(updated);
+                db.SaveChanges();
+                return GPA;
+            }
         }
         #endregion
     }
