@@ -8,9 +8,6 @@ namespace RuxSchool
 {
     public static class School
     {
-       
-        
-
         public static Student CreateProfile(string name,string dob,Syllabus medium, string emailId,string standard)
         {
             var student_profile = new Student();
@@ -73,12 +70,11 @@ namespace RuxSchool
             }
         }
 
-        public static Student RetrieveStudentProfile(int rollnumber)
+        public static IQueryable<Student> RetrieveStudentProfile(string email)
         {
-            using (var db = new StudentDB())
-            {
-                return db.StudentDetails.Where(a => a.RollNumber == rollnumber).First();
-            }
+            var db = new StudentDB();
+            return db.StudentDetails.Where(a => a.EmailID == email);
+            
         }
 
         public static ExamResults RetrieveMarks(int examnumber)

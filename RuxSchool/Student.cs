@@ -19,17 +19,16 @@ namespace RuxSchool
     /// </summary>
     public class Student
     {
-        #region statics
-        private static int lastRollNumber = 1;
-        #endregion
+        
 
         #region properties
         [Key]
         //Unique roll number of the student 
-        public int RollNumber { get; private set; }
+        public int RollNumber { get; set; }
         //Name of the student 
         public string Name { get; set; }
         //Contact number of the student
+        [DataType(DataType.EmailAddress)]
         public string EmailID { get; set; }
         //Date of birth of the student
         public string DOB { get; set; }
@@ -42,20 +41,13 @@ namespace RuxSchool
         // Number of working days of the student till date
         public int WorkingDays { get; set; }
         // Total marks obtained by the student in tests.
-        public decimal Marks { get;  private set; }
-        public decimal GPA { get; private set; }
+        public decimal Marks { get;  set; }
+        //Average percentage
+        public decimal GPA { get; set; }
         public virtual ICollection<ExamResults> Results { get; set; }
         #endregion
 
-        #region constructor
-        /// <summary>
-        /// To generate roll number automatically
-        /// </summary>
-        public Student ()
-        {
-            RollNumber = lastRollNumber++;
-        }
-        #endregion
+        
 
         #region Methods
        

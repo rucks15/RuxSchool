@@ -36,8 +36,8 @@ namespace RuxSchool
                         case "1":
                             Console.WriteLine("Enter the roll number:");
                             int rollnu = Convert.ToInt32(Console.ReadLine());
-                            var getProfile = School.RetrieveStudentProfile(rollnu);
-                            Console.WriteLine($"Name:{getProfile.Name}\nRollNumber:{getProfile.RollNumber}\nDateOfBirth:{getProfile.DOB}\nEmailID:{getProfile.EmailID}\nStandard:{getProfile.Standard}\nMedium:{getProfile.Medium}");
+                            //var getProfile = School.RetrieveStudentProfile(rollnu);
+                            //Console.WriteLine($"Name:{getProfile.Name}\nRollNumber:{getProfile.RollNumber}\nDateOfBirth:{getProfile.DOB}\nEmailID:{getProfile.EmailID}\nStandard:{getProfile.Standard}\nMedium:{getProfile.Medium}");
                             break;
                         case "2":
                             Console.WriteLine("Enter the roll number:");
