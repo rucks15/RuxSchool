@@ -1,0 +1,53 @@
+Ruckumane Krishnasamy Hariharan   
+===============================
+**22628 38th Dr SE Bothell WA, 98021**
+**|rucks15@gmail.com**
+**|4257868545** 
+                                                                                          
+
+Summary
+-------  
+ > Energetic and passionate programmer familiar with object oriented programming, have strong educational background in Computer Science and experience with software development tools. Developed Web Applications using latest tools and methodologies and worked with my own mini projects in .NET Framework to enhance my programming skills. Seeking for a challenging real world environment where I can work as a team and solve real world problems.   
+
+Education
+---------   
+*  **PSG COLLEGE OF TECHNOLOGY - Anna University, Coimbatore, India.**      
+*  **B.Sc Information Technology - (2010-2013)**   
+ * **CGPA : 8.7/10**       
+ * **Majors:**   
+  C, Object Oriented Programming with C++, Unix, Data Structures(Advanced), Web Design, Computer Architecture, Analog and Digital Communication, Database Systems, Software Engineering.   
+  * **Minors:**   
+ Java, Computer Networks, Digital Electronics, Calculus, Probability and Statistics, Algebra, Discrete Mathematics, UI Design, Operating Systems, Microprocessors and Microcontrollers, Information Security, Graphics and Multimedia.  
+
+* **Kal Academy - (Nov 2016 - current)**   
+ * C# Programming (Nov 2016 – Feb 2017)   
+ * Data Structures and Algorithms (Feb 2017 – April 2017) 
+  
+* **Codecademy - (Sep - Dec 2016)**   
+ * Make a Website Course using HTML and CSS (Oct 2016 - Dec 2016)   
+
+Skills   
+------   
+*  **Programming Languages**   
+  * C, C++, C#, SQL, CSS, Java, Oracle   
+
+*  **Programming Tools**   
+  * Visual basic, .NET Framework, Github and Microsoft Azure.
+
+Projects
+--------
+*  School Management System web application developed in Visual Studio.   
+  * Front End: C#, java script, CSS   
+  * Back End: SQL Server   
+  * Pattern/Framework: MVC   
+  * **Github:** [RuxSchool](https://github.com/rucks15/RuxSchool.git)  
+*  Banking System web application developed in Visual Studio Front End : C#, java script, CSS, Back End : SQL Server, Pattern/Framework : MVC.
+ * **Github:** [RuxBank](https://github.com/rucks15/RucksBank.git)     
+
+Certification   
+-------------
+*  Data Science Certification-Microsoft (In Progress)
+
+
+ 
+
