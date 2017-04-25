@@ -24,6 +24,13 @@ namespace RuxSchool
 
         #endregion
 
-        
+        #region Methods
+        public int EnterMarks(int mark[])
+        {
+
+        }
+        #endregion
+
+
     }
 }
