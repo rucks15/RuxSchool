@@ -6,9 +6,7 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -66,8 +64,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RollNumber }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RollNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RollNumber })
+            @Html.ActionLink("Details", "Details", new { id=item.RollNumber }) 
+           
         </td>
     </tr>
 }

@@ -24,7 +24,7 @@ namespace RuxSchool
 
          public virtual DbSet<ExamResults> Results { get; set; }
 
-        public virtual DbSet<Faculty> FacultyDetails { get; set; }
+      
     }
 
 }
